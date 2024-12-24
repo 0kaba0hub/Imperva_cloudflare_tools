@@ -1,0 +1,45 @@
+[Imperva_API]
+url = https://my.imperva.com/api/integration/v1/ips
+timeout = 10
+
+[Cloudflare_API]
+url= https://api.cloudflare.com/client/v4/ips
+timeout = 10
+
+[Email]
+enable_smtp = true
+smtp_server = smtp.example.com
+smtp_port = 587
+smtp_username = your_email@example.com
+smtp_password = your_password
+email_from = your_email@example.com
+email_to = recipient@example.com
+email_subject = Hummers Imperva Bot: Alert issue
+smtp_timeout = 10
+email_template = email_template.html
+
+[Flock]
+enable_flock = true
+flock_webhook_url = https://api.flock.com/hooks/sendMessage/room-id
+flock_timeout = 10
+
+[Files]
+ip_file = /etc/apache2/remoteip/ip.txt
+ipv6_file = /etc/apache2/remoteip/ip6.txt
+
+[Apache]
+apache_reload_command = systemctl reload apache2
+
+[Logging]
+log_file = script.log
+debug = true
+
+[F5]
+f5_host = f5.host.com
+f5_username = user
+f5_password = password
+f5_ip_list_name = IP_Imperva_Whitelist
+f5_ssl_verify = False
+# or f5_ssl_verify = /path/to/certificate
+f5_timeout = 30
+

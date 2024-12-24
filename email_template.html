@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Alert</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h1 {
+            color: #003366;
+        }
+        .content {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .error {
+            color: #e60000;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: left;
+            padding: 10px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Error Notification</h1>
+        <div class="content">
+            <p><strong>Dear Team,</strong></p>
+            <p>We encountered the following issue:</p>
+            <p class="error">{{ error_message }}</p>
+            <p>Please look into this issue and fix the issue as soon as possible.</p>
+        </div>
+        <div class="footer">
+            <p>Thank you for your patience and understanding.</p>
+            <p>Best regards, <br>Your monitoring bot</p>
+        </div>
+    </div>
+</body>
+</html>
+
